@@ -1,0 +1,64 @@
+# Bilibili_VideoScraper
+
+## 项目简介
+
+Bilibili_VideoScraper 是基于 bilibili-api 的 Python 爬虫工具集，包含两个主要功能模块：
+
+1. **Bli_VIScraper.py**  
+   根据 UP 主 UID 爬取指定时间范围内的视频数据（播放量、点赞、收藏、投币等），生成 SQLite 数据库和 CSV 文件
+
+2. **Bli_CDScraper_BV.py**  
+   根据 BV 号爬取视频的弹幕和评论数据，生成 CSV 文件
+
+## 功能
+
+- 根据 BV 号爬取视频弹幕，评论数据
+- 生成结构化的db文件和 CSV 文件
+- 可通过配置文件实现批量爬取
+- 可通过自动化运行脚本实现定时任务调用
+
+## 目录结构
+
+Bilibili_VideoScraper/
+├── Auto_runner.py # 自动运行脚本
+├── Bli_CDScraper_BV.py # 弹幕评论爬取脚本
+├── Bli_VIScraper.py # 视频信息爬取脚本
+├── config.json # 配置文件示例
+├── Requirements.txt # 依赖库
+├── README.md # READ ME！
+└── pycache/ # Python缓存文件夹
+
+## 环境依赖
+
+- Python 3.6+
+- 推荐使用虚拟环境
+- 需要安装用到的依赖库 pip install -r requirements.txt
+
+## 使用指南
+1. **配置文件说明（config.json）**
+json
+{
+  "uids": [63231],                   // UP主UID列表（可多个）
+  "use_login": true,                 // 是否使用登录凭证
+  "SESSDATA": "your_sessdata",       // 登录凭证1
+  "bili_jct": "your_bili_jct",       // 登录凭证2
+  "BUVID3": "your_buvid3",           // 设备标识
+  "mode": "recent",                  // 爬取模式: recent/date_range
+  "recent_days": 7,                  // 最近天数（仅recent模式）
+  "start_date": "2023-01-01",        // 开始日期（仅date_range模式）
+  "end_date": "2023-12-31",          // 结束日期（仅date_range模式）
+  "bv_list": [                       // 要爬取的BV号列表
+    "BV1xx4y1y7xx",
+    "BV1yy4y1y7yy"
+  ]
+}
+
+
+2. **登录凭证获取**
+    登录 Bilibili 网站
+    按 F12 打开开发者工具
+    转到 Application → Cookies
+    复制以下值：
+    SESSDATA
+    bili_jct
+    BUVID3

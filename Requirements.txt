@@ -1,0 +1,20 @@
+# 核心依赖
+bilibili-api>=14.0.0  # B站官方API
+pandas>=1.5.0        # 数据处理
+requests>=2.28.0     # HTTP请求
+aiohttp>=3.8.0       # 异步HTTP
+
+# 数据库相关
+sqlalchemy>=2.0.0    # ORM支持
+sqlite3>=3.0.0       # 内置库（通常不需要单独安装）
+
+# 数据处理
+lxml>=4.9.0          # XML解析
+beautifulsoup4>=4.11.0 # HTML解析
+
+# 实用工具
+tqdm>=4.65.0         # 进度条
+loguru>=0.7.0        # 日志记录
+
+# Python标准库（无需安装）
+# asyncio, os, csv, datetime, typing, json, sys, time, logging, xml.etree.ElementTree
