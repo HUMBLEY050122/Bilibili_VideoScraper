@@ -12,7 +12,7 @@ Bilibili_VideoScraper 是基于 [bilibili-api](https://github.com/SocialSisterYi
 
 ## 示例
 
-依据该项目爬取数据完成的Tableau看板
+依据该项目爬取数据完成的 [Tableau看板](https://public.tableau.com/views/Bilibili_DA/1?:language=zh-CN&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 ![image](https://github.com/user-attachments/assets/c2214786-6938-4c1d-a45f-ddbe64a30e3c)
 
 
@@ -95,7 +95,7 @@ json
 
 2. **访问频率控制**  
    - 默认配置已设置一定请求间隔  
-   - 请勿随意提高请求频率，避免可能产生的合理问题  
+   - 请勿随意提高请求频率，避免可能产生的问题  
    - 高频请求可能导致IP被封禁或账号受限  
 
 3. **隐私保护**  
