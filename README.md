@@ -2,13 +2,19 @@
 
 ## 项目简介
 
-Bilibili_VideoScraper 是基于 bilibili-api 的 Python 爬虫工具集，包含两个主要功能模块：
+Bilibili_VideoScraper 是基于 [bilibili-api](https://github.com/SocialSisterYi/bilibili-API-collect) 的 Python 爬虫工具集，包含两个主要功能模块：
 
 1. **Bli_VIScraper.py**  
    根据 UP 主 UID 爬取指定时间范围内的视频数据（播放量、点赞、收藏、投币等），生成 SQLite 数据库和 CSV 文件
 
 2. **Bli_CDScraper_BV.py**  
    根据 BV 号爬取视频的弹幕和评论数据，生成 CSV 文件
+
+## 示例
+
+依据该项目爬取数据完成的Tableau看板
+![image](https://github.com/user-attachments/assets/c2214786-6938-4c1d-a45f-ddbe64a30e3c)
+
 
 ## 功能
 
